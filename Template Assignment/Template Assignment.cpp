@@ -1,7 +1,7 @@
 // Jonah Meoak
 // CIS 1202 M01
 // May 3 2026
-// 
+// Demo of half function with template stuff
 
 #include <iostream>
 
@@ -15,12 +15,12 @@ int half<int>(int value);
 
 int main()
 {
-	int i = 5;
-	int i2 = -7;
+	int i = 3;
+	int i2 = -5;
 	int i3 = 10;
-	double d = 9.0;
+	double d = 7.0;
 	double d2 = -7.0;
-	float f = 9.0f;
+	float f = 5.0f;
 
 	cout << "int i: " << half(i) << endl;
 	cout << "int i2: " << half(i2) << endl;
@@ -39,5 +39,5 @@ T half(T value)
 template <>
 int half<int>(int value)
 {
-	return (value + 1) / 2;
+	return round(value / 2.0);
 }
